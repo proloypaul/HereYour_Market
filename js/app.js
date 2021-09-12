@@ -9,7 +9,7 @@ loadProducts();
 
 // show all product in UI 
 const showProducts = (products) => {
-  const allProducts = products.map((pd) => pd);
+  const allProducts = products.map((product) => product);
   for (const product of allProducts) {
     const image = product.image;
     const div = document.createElement("div");
@@ -40,7 +40,7 @@ const addToCart = (id, price) => {
 
 const getInputValue = (id) => {
   const element = document.getElementById(id).innerText;
-  const converted = parseInt(element);
+  const converted = parseFloat(element);  // change parseInt(element)
   return converted;
 };
 
@@ -49,12 +49,12 @@ const updatePrice = (id, value) => {
   const convertedOldPrice = getInputValue(id);
   const convertPrice = parseFloat(value);
   const total = convertedOldPrice + convertPrice;
-  document.getElementById(id).innerText = Math.round(total);
+  document.getElementById(id).innerText = parseFloat(parseFloat(total).toFixed(2)); // change Math.round(total)
 };
 
 // set innerText function
 const setInnerText = (id, value) => {
-  document.getElementById(id).innerText = Math.round(value);
+  document.getElementById(id).innerText = parseFloat(parseFloat(value).toFixed(2));
 };
 
 // update delivery charge and total Tax
@@ -80,4 +80,5 @@ const updateTotal = () => {
     getInputValue("price") + getInputValue("delivery-charge") +
     getInputValue("total-tax");
   document.getElementById("total").innerText = grandTotal;
+
 };
