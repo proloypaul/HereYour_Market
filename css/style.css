@@ -2,6 +2,7 @@ body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
+/* start search box style */
 .search-field {
   border: none;
   border-radius: 50px;
@@ -25,6 +26,9 @@ body {
   border-radius: 25px;
   margin-left: 20px;
 }
+/* Finsh search box style  */
+
+/* Start products style */
 #all-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -48,6 +52,9 @@ body {
   width: 150px;
   height: 150px;
 }
+/* Finesh products style */
+
+/* start cart style */
 .cart {
   width: 350px;
   /* border: 1px solid green; */
@@ -60,6 +67,10 @@ body {
 .cart-main {
   padding-right: 30px;
 }
+/* Finesh cart style */
+
+
+
 @media only screen and (max-width: 768px) {
   #all-products {
     display: grid;

@@ -1,3 +1,4 @@
+// load product
 const loadProducts = () => {
   const url = `https://fakestoreapi.com/products`;
   fetch(url)
@@ -26,6 +27,8 @@ const showProducts = (products) => {
     document.getElementById("all-products").appendChild(div);
   }
 };
+
+// cart account 
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
@@ -61,11 +64,11 @@ const updateTaxAndCharge = () => {
     setInnerText("delivery-charge", 30);
     setInnerText("total-tax", priceConverted * 0.2);
   }
-  if (priceConverted > 400) {
+  else if (priceConverted > 400) {
     setInnerText("delivery-charge", 50);
     setInnerText("total-tax", priceConverted * 0.3);
   }
-  if (priceConverted > 500) {
+  else if (priceConverted > 500) {
     setInnerText("delivery-charge", 60);
     setInnerText("total-tax", priceConverted * 0.4);
   }
