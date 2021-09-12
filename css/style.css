@@ -1,5 +1,6 @@
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  width: 100%;
   font-family: "Montserrat", sans-serif;
 }
 /* start search box style */
@@ -38,6 +39,11 @@ body {
   margin: auto;
   align-items: center;
   justify-content: center;
+}
+.product{
+  background-color: black;
+  color: white;
+  margin: 10px;
 }
 .single-product {
   padding: 10px;
