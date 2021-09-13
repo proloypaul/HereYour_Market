@@ -5,7 +5,8 @@ body {
 }
 /* start search box style */
 .search-field {
-  border: 1px solid rgb(3, 118, 211);
+  color:  #011f4b;
+  border: 1px solid  #011f4b;
   border-radius: 5px;
   padding: 5px; 
   width: 281px;
@@ -21,9 +22,12 @@ body {
   
 }
 .search-button {
-  padding: 10px 50px;
-  border-radius: 25px;
-  
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #011f4b;
+  color: white;
+  font-weight: 600;
+
 }
 /* Finsh search box style  */
 
@@ -39,11 +43,14 @@ body {
   justify-content: center;
 }
 .product{
-  background-color: black;
-  color: white;
+  background-color: #f9f4f4 ;
+  color: #051e3e;
   margin: 10px;
   border: 0;
   border-radius: 10px;
+}
+.product-title, .product-price{
+  font-weight: bold;
 }
 .single-product {
   padding: 10px;
@@ -64,8 +71,10 @@ body {
 
 
 .cart {
+  background-color: #051e3e;
+  color: white;
   width: 300px;   /* change width 350px  */
-  /* border: 1px solid green; */
+  border: 0;
   padding: 10px;
   box-shadow: 10px 10px 20px gray;
   border-radius: 5px;
