@@ -20,9 +20,10 @@ const showProducts = (products) => {
       </div>
       <h3>${product.title}</h3>
       <p>Category: ${product.category}</p>
+      <h4>Rate: ${product.rating.rate}</h4>
       <h2>Price: $ ${product.price}</h2>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
+      <button onclick="addToCart(${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
+      <button onclick="collectId(${product.id})" id="details-btn" class="btn btn-danger">Details</button></div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
@@ -30,7 +31,7 @@ const showProducts = (products) => {
 
 // cart account 
 let count = 0;
-const addToCart = (id, price) => {
+const addToCart = (price) => {
   count = count + 1;
   updatePrice("price", price);
 
@@ -83,3 +84,12 @@ const updateTotal = () => {
   document.getElementById("total").innerText = parseFloat(parseFloat(grandTotal).toFixed(2));  // change grandTotal
 
 };
+
+// collect data Id  
+const collectId = (idData) => {
+  const url = `https://fakestoreapi.com/products/${idData}`;
+  fetch(url)
+    .then(res => res.json())
+    .then(data => console.log(data));
+};
+
