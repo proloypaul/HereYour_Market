@@ -64,7 +64,15 @@ body {
 .product-image {
   width: 150px;
   height: 150px;
+  border: 0;
+  border-radius: 10px;
 }
+#addToCart-btn, #details-btn{
+  background-color: #011f4b;
+  color: white;
+}
+
+
 /* Finesh products style */
 
 /* start cart style */
@@ -72,7 +80,7 @@ body {
 
 .cart {
   background-color: #051e3e;
-  color: white;
+  color: whitesmoke;
   width: 300px;   /* change width 350px  */
   border: 0;
   padding: 10px;
@@ -93,8 +101,16 @@ body {
   padding: 10px;
 }
 #addedDetails img{
-  width: 50%;
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
 
+}
+.details{
+  background-color: #1e1f26;
+  color: whitesmoke;
+  padding: 20px;
+  border-radius: 10px;
 }
 /* Finesh added details  */
 

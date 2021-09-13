@@ -22,8 +22,8 @@ const showProducts = (products) => {
       <p>Category: ${product.category}</p>
       <h5>Rate: ${product.rating.rate} Count: ${product.rating.count}</h5>
       <h4 class="product-price">Price: $ ${product.price}</h4>
-      <button onclick="addToCart(${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button onclick="collectId(${product.id})" id="details-btn" class="btn btn-danger">Details</button></div>
+      <button onclick="addToCart(${product.price})" id="addToCart-btn" class="buy-now btn btnOne">add to cart</button>
+      <button onclick="collectId(${product.id})" id="details-btn" class="btn btnTwo">Details</button></div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
@@ -95,16 +95,19 @@ const collectId = (idData) => {
 
 const displayDetailsId = data => {
 
-  console.log(data)
+  // console.log(data)
   const addedDetails = document.getElementById("addedDetails");
   addedDetails.textContent = "";
   const div = document.createElement("div");
+  div.classList.add("details")
   div.innerHTML = `
     <div>
       <img src="${data.image}"/>
-      <h4>Rate: ${data.rating.rate}</h4>
-      <h1>${data.title}</h1>
-      <p>${data.description}</p>
+      <div>
+        <h4>Rate: ${data.rating.rate}</h4>
+        <h3>${data.title}</h3>
+        <p>${data.description}</p>
+      </div>
     </div>
   `
   addedDetails.appendChild(div);
