@@ -41,8 +41,8 @@ body {
   justify-content: center;
 }
 .product{
-  background-color: black;
-  color: white;
+  /* background-color: black; */
+  /* color: white; */
   margin: 10px;
   border: 0;
   border-radius: 10px;
@@ -76,6 +76,18 @@ body {
   padding-right: 30px;
 }
 /* Finesh cart style */
+
+/* strat added details  */
+#addedDetails{
+  width: 50%;
+  margin: 20px auto;
+  padding: 10px;
+}
+#addedDetails img{
+  width: 50%;
+
+}
+/* Finesh added details  */
 
 
 

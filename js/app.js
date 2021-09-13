@@ -90,6 +90,21 @@ const collectId = (idData) => {
   const url = `https://fakestoreapi.com/products/${idData}`;
   fetch(url)
     .then(res => res.json())
-    .then(data => console.log(data));
+    .then(data => displayDetailsId(data));
 };
 
+const displayDetailsId = data => {
+
+  // console.log(data)
+  const addedDetails = document.getElementById("addedDetails");
+  const div = document.createElement("div");
+  div.innerHTML = `
+    <div>
+      <img src="${data.image}"/>
+      <h4>Rate: ${data.rating.rate}</h4>
+      <h1>${data.title}</h1>
+      <p>${data.description}</p>
+    </div>
+  `
+  addedDetails.appendChild(div);
+}
