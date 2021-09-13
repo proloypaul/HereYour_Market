@@ -63,8 +63,10 @@ body {
 /* Finesh products style */
 
 /* start cart style */
+
+
 .cart {
-  width: 350px;
+  width: 300px;   /* change width 350px  */
   /* border: 1px solid green; */
   padding: 10px;
   box-shadow: 10px 10px 20px gray;
