@@ -97,6 +97,7 @@ const displayDetailsId = data => {
 
   console.log(data)
   const addedDetails = document.getElementById("addedDetails");
+  addedDetails.textContent = "";
   const div = document.createElement("div");
   div.innerHTML = `
     <div>
